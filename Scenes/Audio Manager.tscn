@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sounds/Background.wav" type="AudioStream" id=1]
+[ext_resource path="res://Sounds/msk.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sounds/btn.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/Audio Manager.gd" type="Script" id=4]
+
+[node name="Audio Manager" type="Node"]
+pause_mode = 1
+script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Btn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="mask" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

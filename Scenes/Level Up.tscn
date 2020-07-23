@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Font/Roboto-Black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/Label.gd" type="Script" id=2]
+[ext_resource path="res://Font/Roboto-Thin.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 3 )
+
+[node name="Level Up" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.870588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_left = 78.0
+margin_top = 22.0
+margin_right = 178.0
+margin_bottom = 122.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 78.0
+margin_top = 22.0
+margin_right = -78.0
+margin_bottom = -22.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.160784, 0.160784, 0.160784, 1 )
+text = "Level Up"
+align = 1
+valign = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/VBoxContainer"]
+margin_top = 55.0
+margin_right = 100.0
+margin_bottom = 72.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/CenterContainer"]
+margin_left = 30.0
+margin_right = 69.0
+margin_bottom = 17.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 35.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.12549, 0.12549, 0.12549, 1 )
+text = "Score:"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_left = 39.0
+margin_top = 1.0
+margin_right = 39.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.117647, 0.117647, 0.117647, 1 )
+script = ExtResource( 2 )

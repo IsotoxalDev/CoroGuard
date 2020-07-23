@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
+[ext_resource path="res://Font/Roboto-Black.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/btnPlayAgain.png" type="Texture" id=3]
+[ext_resource path="res://assets/menubtn.png" type="Texture" id=4]
+[ext_resource path="res://Font/Roboto-Thin.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+use_filter = true
+extra_spacing_space = 4
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.192157, 0.192157, 0.192157, 0.94902 )
+text = "Game Over"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 53.0
+margin_top = 60.0
+margin_right = 203.0
+margin_bottom = 94.0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 78.0
+margin_top = 100.0
+margin_right = 178.0
+margin_bottom = 134.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 10.0
+margin_right = 256.0
+margin_bottom = 30.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+margin_left = 105.0
+margin_right = 151.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.184314, 0.184314, 0.184314, 1 )
+text = "Score"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/HBoxContainer"]
+margin_left = 46.0
+margin_right = 46.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.2, 0.2, 0.2, 1 )
+[connection signal="pressed" from="TextureButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]
